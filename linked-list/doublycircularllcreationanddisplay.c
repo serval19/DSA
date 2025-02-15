@@ -40,5 +40,6 @@ void main(){
     printf("%d",temp->data);
 
 }
+/* end*/
 
 
