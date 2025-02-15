@@ -11,3 +11,4 @@ def bubblesort(arr):
 array=eval(input("Enter the array:"))
 bubblesort(array)
 print(array)
+# rewrite in c later
