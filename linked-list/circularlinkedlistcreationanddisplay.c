@@ -37,4 +37,4 @@ void main(){
         }
     }
 }
-/* reversing a dobuly circlular ll is same as exchanging the values of head and tail pointers ig*/
+/* create seperate functions for creation and display*/
