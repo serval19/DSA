@@ -1,45 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct node{
+struct node
+{
     int data;
-    struct node *next;
+    struct node *left;
+    struct node *right;
 };
-void main(){
-    /* push*/
-    struct node *top=0;
+struct node *create()
+{
     struct node *newnode;
-    newnode=(struct node*)malloc(sizeof(struct node));
-    newnode->data=x;/* x is received from user*/
-    newnode->next=top;
-    top=newnode;
-    /*display*/
-    struct node *temp;
-    temp=top;
-    if(top==0){
-        /*empty*/
+    newnode = (struct node *)malloc(sizeof(struct node));
+    int x;
+    printf("Enter data (-1 for no node):");
+    scanf("%d", &x);
+    if (x == -1)
+    {
+        return 0;
     }
-    else{
-        while(temp!=0){
-            printf("%d",temp->data);
-            temp=temp->next;
-        }
+    else
+    {
+        newnode->data = x;
+        printf("Enter left child of %d: ", x);
+        newnode->left = create();
+        printf("Enter right child of %d: ", x);
+        newnode->right = create();
+        return newnode;
     }
-    /*peek*/
-    if(top==0){
-        /*empty*/
-    }
-    else{
-        printf("%d",top->data);
-    }
-    /*pop*/
-    struct node *temp1;
-    temp1=top;
-    if(top==0){
-        /*empty*/
-    }
-    else{
-        printf("%d",top->data);
-        top=top->next;
-        free(temp1);
-    }
+}
+
+void main()
+{
+    struct node *root;
+    root = 0;
+    root = create();
 }
