@@ -6,12 +6,6 @@ struct node
     struct node *left;
     struct node *right;
 };
-void main()
-{
-    struct node *root;
-    root = 0;
-    root = create();
-}
 struct node *create()
 {
     struct node *newnode;
@@ -32,4 +26,11 @@ struct node *create()
         newnode->right = create();
         return newnode;
     }
+}
+
+void main()
+{
+    struct node *root;
+    root = 0;
+    root = create();
 }
